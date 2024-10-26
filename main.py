@@ -83,7 +83,7 @@ def main():
     if st.button("Get Recommendations"):
         recommendations = recommend_tracks(kpop_df, track_name, features, num_recommendations)
 
-        st.write("### Recommended Song")
+        st.write("### Recommendation Song")
         
         for i, (index, row) in enumerate(recommendations.iterrows()):
             # Embed Spotify preview using Track ID
