@@ -9,6 +9,7 @@ from datetime import datetime
 @st.cache_data
 def load_data():
     df = pd.read_csv('kpop_tracks.csv')
+    df = df.drop_duplicates(subset=['Track Name', 'Artists'])
     return df
 
 # Calculate the difference in months from the current date
