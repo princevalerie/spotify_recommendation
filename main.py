@@ -37,7 +37,7 @@ def preprocess_data(df):
 def recommend_tracks(df, track_name, features, num_recommendations):
     try:
         # Set up the KNN model
-        knn_model = NearestNeighbors(n_neighbors=num_recommendations + 1, algorithm='auto')
+        knn_model = NearestNeighbors(n_neighbors=num_recommendations + 1, algorithm='brute')
         knn_model.fit(df[features])
 
         # Find the index of the selected track
